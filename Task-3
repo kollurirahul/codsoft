@@ -7,15 +7,15 @@ def generate_password():
     length = length_scale.get()
     complexity = complexity_scale.get()
 
-  if length <= 0:
+    if length <= 0:
         messagebox.showerror("Error", "Password length must be greater than zero.")
         return
 
-  if complexity <= 0:
+    if complexity <= 0:
         messagebox.showerror("Error", "Password complexity must be greater than zero.")
         return
 
-  characters = ""
+    characters = ""
     if complexity >= 1:
         characters += string.ascii_letters
     if complexity >= 2:
